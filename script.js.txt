@@ -1,0 +1,94 @@
+//BANCO DE DADOS
+
+let nomeAll = ["Anderson", "Antenor", "Arthur", "Cristian", "Danilo", "Eduardo", "Felipe"]
+
+let Anderson = {
+    nome: "Anderson",
+    matricula: "BC779971"
+}
+
+let Antenor = {
+    nome: "Antenor",
+    matricula: "BC753026"
+}
+    
+let Arthur  = {
+    nome: "Arthur ",
+    matricula: "BC779631"
+}
+
+let Cristian  = {
+    nome: "Cristian ",
+    matricula: "BC781267"
+}
+
+let Danilo  = {
+    nome: "Danilo ",
+    matricula: "BC779632"
+}
+
+let Eduardo  = {
+    nome: "Eduardo ",
+    matricula: "BC770266"
+}
+
+let Felipe  = {
+    nome: "Felipe",
+    matricula: "BC779630"
+}
+
+//CONTEUDO
+let content = document.querySelector(".content");
+
+// -- form_content(form-lig)
+for (let i = 0; i < nomeAll.length; i++) {
+    let selcNomes = document.querySelector(".selcNomes");
+    let optionElement = document.createElement("option");
+
+    optionElement.innerHTML = nomeAll[i];
+
+    selcNomes.appendChild(optionElement);
+
+    localStorage.setItem(nomeAll[i], 0);
+}
+
+let confirmaForm = document.querySelector(".confirmaForm");
+
+confirmaForm.addEventListener("click", ()=>{
+    
+    let nomeForm = document.querySelector(".selcNomes").value;
+    let bd_rel = document.querySelector(".bd-rel"); 
+    let ligacoes = document.querySelector("#ligacoes").value;
+    let marcadas = document.querySelector("#marcadas").value;
+    let opcao1 = document.querySelector("#opcao1");  
+    
+    let porcentagemMarcadas = (marcadas * 100) / ligacoes + "%";
+
+    eval(`var matricula = ${nomeForm}.matricula`);
+
+    let statusExpediente = "";
+    
+    if(opcao1.checked){
+        statusExpediente = "/ Finalizou o expediente"
+    }else{
+        statusExpediente = "";
+    }
+    
+    let scriptGeral = `
+        <p>${nomeForm} / ${matricula}</p>
+        <p>${ligacoes} ligações - ${marcadas} marcadas
+        / ${parseFloat(porcentagemMarcadas).toFixed(1)}% das QAs 
+        ${statusExpediente}</p>
+        <p>__</p>
+    `;
+
+    let lig = {
+        ligacoes: ligacoes,
+        marcadas: marcadas
+    }
+
+    bd_rel.innerHTML = scriptGeral;
+
+    localStorage.setItem(nomeForm, JSON.stringify(lig));
+    console.log(lig);
+})

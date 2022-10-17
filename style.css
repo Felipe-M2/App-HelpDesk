@@ -1,0 +1,138 @@
+/*----- --GERAL-- -----*/
+/* /* @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); questrial */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');  /* inter */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");  /* icons */
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--back1);
+}
+
+/* --GERAL-- */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --VARIAVEIS-- */
+:root{
+    --back: #1D1D1D;
+    --back1: #1C2333;
+    --corFont: #FF8E00;
+}
+
+/* --TOPO-- */
+.topo{
+    max-width: 430px;
+    width: 100%;
+    justify-content: space-between !important;
+    padding: 10px;
+}
+
+/* -logo- */
+.logo span{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.logo span:nth-child(2){
+    font-size: 1.3rem;
+    color: var(--corFont);
+    font-weight: bold;
+}
+
+/* -acc- */
+.acc{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.pictureAcc{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 10px;
+}
+
+/* -form_lig- */
+.relGeral{
+    color: #fff;
+}
+
+.relGeral p{
+    font-size: 0.8rem;
+}
+
+.form_lig{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.numLig{
+    padding: 10px 0;
+}
+
+.numLig input{
+    width: 100px;
+    display: block;
+    height: 25px;
+    border-radius: 20px;
+    padding: 0 7px;
+    outline: none;
+}
+
+.expediente{
+    padding: 20px 0;
+}
+
+.expediente input{
+    margin-right: 10px;
+}
+
+/* --RODAPE-- */
+.rodape{
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+/* -nav-bar-end- */
+.nav-bar-end ul{
+    align-items: center;
+    display: flex;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.nav-bar-end ul li{
+    padding: 5px 10px;
+}
+
+.mais-end{
+    background: var(--corFont);
+    border-radius: 50%;
+    padding: 0;
+}
+
+.mais-end i{
+    font-size: 2.2rem;
+}

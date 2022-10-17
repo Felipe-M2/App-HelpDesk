@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- --TOPO-- -->
+    <header class="topo center">
+
+        <!-- -logo- -->
+        <div class="logo">
+            <span>help</span><span>DESK</span>
+        </div>
+
+        <!-- -acc- -->
+        <div class="acc center">
+            <p class="nameAcc">NOME</p>
+            
+            <div class="pictureAcc"></div>
+        </div>
+    </header>
+
+    <!-- --CONTEUDO-- -->
+    <main class="content">
+        <!-- -form-lig- -->
+        <form class="form_lig">
+            <p>Nome</p>
+            <select class="selcNomes" id="nomes">
+                <option></option>
+            </select>
+
+            <div class="numLig">
+                <label for="ligacoes">Ligações:</label>
+                <input type="number" id="ligacoes" placeholder="ligações"> 
+                <label for="ligacoes">Marcadas:</label>
+                <input type="number" id="marcadas" placeholder="marcadas"> 
+            </div>
+
+            <div class="expediente">
+                <p>Finalizou o expediente?</p>
+                <label for="opcao1">Sim</label>
+                <input type="radio" name="perfilCliente" class="radio" id="opcao1">
+                <label for="opcao2">Não</label>
+                <input type="radio" name="perfilCliente" class="radio" id="opcao2">
+            </div>
+
+            <p class="confirmaForm">Confirma</p>
+        </form>
+
+        <section class="relGeral">
+            <h1>Relatorio</h1>
+
+            <div class="bd-rel">
+                
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <!-- --RODAPE-- -->
+    <footer class="rodape">
+        <!-- -nav-bar-end- -->
+        <nav class="nav-bar-end">
+            <ul>
+                <li><i class="bi bi-house"></i></li>
+                <li><i class="bi bi-stopwatch"></i></li>
+                <li class="mais-end"><i class="bi bi-plus"></i></li>
+                <li><i class="bi bi-card-list"></i></li>
+                <li><i class="bi bi-person"></i></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
